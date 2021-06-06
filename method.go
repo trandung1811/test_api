@@ -8,6 +8,9 @@ import (
 	"path/filepath"
 )
 
+func getRequest(w http.ResponseWriter, r *http.Request) {
+	w.Write([]byte("Hello world"))
+}
 func getUploadFile(w http.ResponseWriter, r *http.Request) {
 	 token:= r.Header.Get("x-access-token")
 	 nameToken :=  token[0:5]
